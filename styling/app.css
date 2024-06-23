@@ -1,0 +1,30 @@
+
+.body {
+    font-family: "Lato", sans-serif;
+    color: rgb(0, 0, 0);
+    background-color: rgb(241, 241, 241);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+footer {
+    margin-top: auto;
+}
+
+/* Typhography */
+.brand-title {
+    font-family: "Press Start 2P", cursive;
+}
+
+.brand-logo {
+    cursor: pointer;
+}
+
+p {
+    color: black;
+}
+
+h5 {
+    color: black;
+}

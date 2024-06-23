@@ -1,0 +1,154 @@
+:root {
+  --bg-color: rgb(20, 20, 20);
+  --bg-light: #dde1e7;
+}
+
+html {
+  overflow: scroll;
+  overflow-x: hidden;
+}
+::-webkit-scrollbar {
+  width: 0;
+  background: transparent;
+}
+
+.body {
+  font-family: "Oswald", sans-serif;
+  color: var(--bg-color);
+  background-color: var(--bg-light);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.dark-theme {
+  color: white;
+  background-color: var(--bg-color);
+}
+
+.button-theme {
+  margin: 15px 0;
+  width: 10%;
+  height: 50px;
+  font-size: 18px;
+  line-height: 50px;
+  font-weight: 600;
+  background: var(--bg-light);
+  border-radius: 25px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: #595959;
+  box-shadow: 2px 2px 5px #babecc, -5px -5px 10px #ffffff73;
+}
+
+.button-theme:hover {
+  color: #3498db;
+  box-shadow: inset 2px 2px 5px #babecc, inset -5px -5px 10px #ffffff73;
+}
+
+footer {
+  margin-top: auto;
+}
+
+h5 {
+  color: white;
+}
+
+button {
+  margin: 20px;
+}
+.semua-btn {
+  width: fit-content;
+  height: 40px;
+  color: #fff;
+  border-radius: 5px;
+  padding: 10px 25px;
+  font-family: "Oswald", sans-serif;
+  font-weight: 500;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5),
+    7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
+  outline: none;
+}
+
+.load-button {
+  background: #102770;
+  border: none;
+  z-index: 1;
+}
+.load-button:after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 100%;
+  top: 0;
+  right: 0;
+  z-index: -1;
+  background-color: #173597;
+  border-radius: 5px;
+  box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5),
+    7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+.load-button:hover {
+  color: #fff;
+}
+.load-button:hover:after {
+  left: 0;
+  width: 100%;
+  color: #fff;
+}
+.load-button:active {
+  top: 2px;
+}
+
+/* .semua-form {
+  background-color: red;
+  color: antiquewhite;
+} */
+
+.reset-btn {
+  background-color: #ffeba7;
+  color: #102770;
+}
+
+.reset-btn:after {
+  background-color: #d4c48c;
+}
+
+.reset-btn:hover {
+  color: #173597;
+}
+
+.input-field {
+  display: flex;
+  flex-direction: column;
+}
+
+.badges {
+  margin: 10px;
+  padding: 12px 12px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none !important;
+  text-transform: capitalize;
+  color: #fff;
+  border: 0 none;
+  border-radius: 10px;
+  font-size: 24px;
+}
+
+.badge-acc {
+  color: #fff;
+  background: #7999a9;
+}
+
+.badge-reject {
+  color: #fe8cdf;
+  background: #353866;
+}

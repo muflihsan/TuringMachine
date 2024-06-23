@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>[Turing Machine]</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin="crossorigin"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora&family=Oswald:wght@300;400;600&family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styling/style.css" />
+  </head>
+  <body>
+    <div class="page-loader">
+      <div class="spinner"></div>
+      <script>
+        // Menjalankan fungsi ketika halaman selesai dimuat
+        window.addEventListener("load", function () {
+          // Menghilangkan halaman pemuatan setelah 2700ms (2.7 detik)
+          setTimeout(function () {
+            document.querySelector(".page-loader").style.display = "none";
+          }, 2500);
+        });
+      </script>
+    </div>
+
+    <h1 class="main-title" style="padding-top: 50px">[Turing Machine]</h1>
+
+    <center>
+      <button class="button-theme" onclick="changeMode()" id="button">
+        Dark Mode
+      </button>
+      <script>
+        function changeMode() {
+          var body = document.body;
+
+          // toggle the theme
+          body.classList.toggle("dark-theme");
+          let button = document.getElementById("button");
+
+          // change the button text
+          if (button.innerHTML == "Dark Mode") {
+            button.innerHTML = "Normal Mode";
+          } else {
+            button.innerHTML = "Dark Mode";
+          }
+        }
+      </script>
+    </center>
+
+    <br />
+
+    <div id="cards">
+      <!-- Link ke halaman operasi penjumlahan -->
+      <a href="operations/penjumlahan.html">
+        <div class="card">
+          <div class="card-content">
+            <div class="card-image">
+              <i class="fa-duotone fa-plus fa-fade"></i>
+            </div>
+            <div class="card-info-wrapper">
+              <div class="card-info">
+                <i class="fa-duotone fa-plus"></i>
+                <div class="card-info-title">
+                  <h3>Pertambahan</h3>
+                  <h4>⇾ Pertambahan.</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </a>
+
+      <!-- Link ke halaman operasi pengurangan -->
+      <a href="operations/pengurangan.html">
+        <div class="card">
+          <div class="card-content">
+            <div class="card-image">
+              <i class="fa-solid fa-minus fa-fade"></i>
+            </div>
+            <div class="card-info-wrapper">
+              <div class="card-info">
+                <i class="fa-solid fa-minus"></i>
+                <div class="card-info-title">
+                  <h3>Pengurangan</h3>
+                  <h4>⇾ Pengurangan.</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </a>
+
+      <!-- Link ke halaman operasi perkalian -->
+      <a href="operations/perkalian.html">
+        <div class="card">
+          <div class="card-content">
+            <div class="card-image">
+              <i class="fa-solid fa-xmark fa-fade"></i>
+            </div>
+            <div class="card-info-wrapper">
+              <div class="card-info">
+                <i class="fa-solid fa-xmark"></i>
+                <div class="card-info-title">
+                  <h3>Perkalian</h3>
+                  <h4>⇾ Perkalian</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </a>
+
+      <!-- Link ke halaman operasi pembagian -->
+      <a href="operations/pembagian.html">
+        <div class="card">
+          <div class="card-content">
+            <div class="card-image">
+              <i class="fa-solid fa-divide fa-fade"></i>
+            </div>
+            <div class="card-info-wrapper">
+              <div class="card-info">
+                <i class="fa-solid fa-divide"></i>
+                <div class="card-info-title">
+                  <h3>Pembagian</h3>
+                  <h4>⇾ Pembagian.</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </a>
+
+      <!-- Link ke halaman operasi pangkat -->
+      <a href="operations/pangkat.html">
+        <div class="card">
+          <div class="card-content">
+            <div class="card-image">
+              <i class="fa-solid fa-superscript fa-fade"></i>
+            </div>
+            <div class="card-info-wrapper">
+              <div class="card-info">
+                <i class="fa-solid fa-superscript"></i>
+                <div class="card-info-title">
+                  <h3>Pangkat</h3>
+                  <h4>⇾ Pangkat.</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </a>
+
+      <!-- Link ke halaman operasi logaritma biner -->
+      <a href="operations/biner.html">
+        <div class="card">
+          <div class="card-content">
+            <div class="card-image">
+              <i class="fa-solid fa-triangle-exclamation fa-fade"></i>
+            </div>
+            <div class="card-info-wrapper">
+              <div class="card-info">
+                <i class="fa-solid fa-triangle-exclamation"></i>
+                <div class="card-info-title">
+                  <h3>Logaritma Biner</h3>
+                  <h4>⇾ Logaritma Biner</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </a>
+
+      <!-- Link ke halaman operasi faktorial -->
+      <a href="operations/faktorial.html">
+        <div class="card">
+          <div class="card-content">
+            <div class="card-image">
+              <i class="fa-solid fa-exclamation fa-fade"></i>
+            </div>
+            <div class="card-info-wrapper">
+              <div class="card-info">
+                <i class="fa-solid fa-exclamation"></i>
+                <div class="card-info-title">
+                  <h3>Faktorial</h3>
+                  <h4>⇾ Faktorial</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </a>
+
+      <!-- Link ke halaman operasi akar kuadrat -->
+      <a href="operations/akarkuadrat.html">
+        <div class="card">
+          <div class="card-content">
+            <div class="card-image">
+              <i class="fa-solid fa-square-root-variable fa-fade"></i>
+            </div>
+            <div class="card-info-wrapper">
+              <div class="card-info">
+                <i class="fa-solid fa-square-root-variable"></i>
+                <div class="card-info-title">
+                  <h3>Akar Kuadrat</h3>
+                  <h4>⇾ Akar Kuadrat.</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </a>
+
+      <!-- Link ke halaman Our Team -->
+      <a href="operations/team.html">
+        <div class="card">
+          <div class="card-content">
+            <div class="card-image">
+              <i class="fa-solid fa-people-group fa-shake"></i>
+            </div>
+            <div class="card-info-wrapper">
+              <div class="card-info">
+                <i class="fa-solid fa-people-group"></i>
+                <div class="card-info-title">
+                  <h3>Our Team [NIM]</h3>
+                  <h4>
+                    ⇾ M0521033<br />
+                    ⇾ M0521045
+                    <br />
+                    ⇾ M0521048
+                    <br />
+                    ⇾ M0521052
+                  </h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <script
+      src="https://kit.fontawesome.com/afd0ad7a1e.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="styling/script.js"></script>
+
+    <p style="color: white">[2023]</p>
+  </body>
+</html>
